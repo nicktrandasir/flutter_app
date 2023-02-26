@@ -1,17 +1,13 @@
 import 'package:flutter/material.dart';
-import '../components/appBar.dart';
-import '../components/homeContent.dart';
-import '../components/myBottomBar.dart';
 
-class Settings extends StatefulWidget {
-  const Settings({Key? key}) : super(key: key);
+class SettingsScreen extends StatefulWidget {
+  const SettingsScreen({Key? key}) : super(key: key);
 
   @override
-  State<Settings> createState() => _SettingsState();
+  State<SettingsScreen> createState() => _SettingsState();
 }
 
-class _SettingsState extends State<Settings> {
-  int _count = 0;
+class _SettingsState extends State<SettingsScreen> {
 
   @override
   Widget build(BuildContext context) {
@@ -19,19 +15,8 @@ class _SettingsState extends State<Settings> {
       backgroundColor: Colors.deepPurpleAccent,
       body: SafeArea(
         child: Row(mainAxisAlignment: MainAxisAlignment.center, children: [
-          myColumn(
-              count: _count
-          )
+          Text('Settings page. Add free api ')
         ]),
-      ),
-      floatingActionButton: FloatingActionButton(
-        backgroundColor: Colors.purple,
-        onPressed: () {
-          setState(() {
-            _count++;
-          });
-        },
-        child: Icon(Icons.add, color: Colors.deepOrangeAccent,),
       ),
     );
   }

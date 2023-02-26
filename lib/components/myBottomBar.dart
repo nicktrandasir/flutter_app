@@ -5,13 +5,12 @@ Widget bottomBar( {required int selectedIndex, required Function onItemTapped}) 
 
 
   return BottomNavigationBar(
-      selectedIconTheme: IconThemeData(color: Colors.white, size: 24),
-      selectedItemColor: Colors.white,
-      unselectedIconTheme: IconThemeData(
+      selectedIconTheme: IconThemeData(color: Colors.purple, size: 24),
+      selectedItemColor: Colors.purple,
+      unselectedIconTheme:  const IconThemeData(
         color: Colors.deepOrangeAccent,
       ),
       unselectedItemColor: Colors.deepOrangeAccent,
-      backgroundColor: Colors.purple,
       currentIndex:  selectedIndex, //New
       onTap: (int selectedIndex) => onItemTapped(selectedIndex),
       items: const <BottomNavigationBarItem>[
@@ -24,12 +23,15 @@ Widget bottomBar( {required int selectedIndex, required Function onItemTapped}) 
           label: 'List',
         ),
         BottomNavigationBarItem(
-          icon: Icon(Icons.settings),
-          label: 'Settings',
+          icon: Icon(Icons.supervised_user_circle),
+          label: 'Profile',
         ),
+        BottomNavigationBarItem(
+          icon: Icon(Icons.settings),
+          label: 'Setting',
+        ),
+
       ],
-
-
     );
   }
 

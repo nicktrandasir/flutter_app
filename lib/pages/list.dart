@@ -1,15 +1,13 @@
 import 'package:flutter/material.dart';
-import '../components/appBar.dart';
-import '../components/myBottomBar.dart';
 
-class List extends StatefulWidget {
-  const List({Key? key}) : super(key: key);
+class ListScreen extends StatefulWidget {
+  const ListScreen({Key? key}) : super(key: key);
 
   @override
-  State<List> createState() => _ListState();
+  State<ListScreen> createState() => _ListState();
 }
 
-class _ListState extends State<List> {
+class _ListState extends State<ListScreen> {
 
   @override
   Widget build(BuildContext context) {
@@ -17,7 +15,7 @@ class _ListState extends State<List> {
       backgroundColor: Colors.deepPurpleAccent,
       body: SafeArea(
         child: Row(mainAxisAlignment: MainAxisAlignment.center, children: [
-          Text('List page')
+          Text('List page. Add free api ')
         ]),
       ),
     );
